@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shpping Cart</title>
+</head>
+
+<body class="bg-light">
+  <banner>
+    <div class="banner">
+      <div class="banner-image">
+
+        <img class="banner-image" src="/images/cyber-monday-retail-sales.jpg" alt="">
+
+      </div>
+    </div>
+    <p class="banner-text">Discover Happiness<br> in Every Purchase.</p>
+  </banner>
+  <section>
+    <div class="container-fluid " style="margin-top: 18rem;">
+      <div class="row">
+        {{#each products}}
+
+        <div class="col-12 col-md-6 col-lg-3 p-3">
+          <div class="card mt-5"
+            style="border-color: #f0eded; background: rgb(255, 255, 255); width:18rem; height: 30rem; border-radius: 12px;">
+            <img class="card-img-top" src="/product-images/{{this._id}}.jpg" alt="Card image cap" style=" border-radius: 12px; border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;">
+            <div class="card-body" style="background:">
+              <h5 class="card-title">{{this.Name}}</h5>
+              <p class="card-text">{{this.description}}<br>{{this.price}}</p>
+              <button onclick="addTocart('{{this._id}}')" class="botton-add-to-cart btn btn-primary" id="ShowCount">Add
+                To Cart</button>
+              <a href="/place-order" class="btn btn-success">Place order</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+  <style>
+    .card {
+      border-width: 2px;
+      width: 18rem;
+      border-radius: 40px;
+      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: -1px 5px 25px -7px #000000;
+    }
+
+
+
+    @media only screen and (max-width: 949px) {
+      .card {
+        margin-top: 3rem;
+      }
+
+      .banner-text {
+        margin-top: -8em;
+        font-family: ui-monospace;
+        font-size: 36px;
+        margin-left: 31px;
+      }
+    }
+
+    .banner-image {
+      width: 100%;
+      height: 31em;
+    }
+
+    @media screen and (min-width:1280px) {
+      .banner-image {
+        height: 39em;
+      }
+
+      .banner-text {
+        margin-top: -8em;
+        font-family: ui-monospace;
+        font-size: 3em;
+        padding-left: 38px;
+      }
+    }
+
+    @media screen and (max-width:500px) {
+      .banner-image {
+        height: 20em;
+      }
+
+      .banner-text {
+        margin-top: -178px;
+        font-family: ui-monospace;
+        font-size: 24px;
+        margin-left: 15px;
+      }
+
+    }
+  </style>
+</body>
+
+</html>

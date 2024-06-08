@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-12">
+            <table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row">{{@index}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      
+    </tr>
+    {{/each}}
+   
+     
+  </tbody>
+</table>
+        </div>
+    </div>
+</div>

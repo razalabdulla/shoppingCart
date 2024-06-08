@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Shopping Cart</title>
+</head>
+
+<body class="bg-secondary">
+    <section>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                {{#each}}
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card" style="border-color: #070101; background: darkgray; ">
+                        <img class="card-img-top" src={{this.imagelink}} alt="Card image cap">
+                        <div class="card-body" style="background:">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <p class="card-text">{{this.description}}<br>{{this.price}}</p>
+                            <a href="#" class="btn btn-primary">Add To cart</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .card {
+            border-width: 2px;
+            width: 18rem;
+            border-radius: 40px;
+            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: -1px 5px 25px -7px #070303;
+
+
+        }
+
+        @media only screen and (max-width: 949px) {
+
+            .card {
+                margin-top: 3rem;
+            }
+        }
+    </style>
+</body>
+
+
+</html>

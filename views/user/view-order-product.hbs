@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 p-3">
+            <div class="card" style="width: 18rem;">
+                {{#each showorderproducts}}
+                <img class="card-img-top" src="/product-images/{{this.product._id}}.jpg" alt="Card image cap">
+                <div class="card-body">
+                   <p class="card-text">{{this.product.Name}}</p>
+                    <p class="card-text">price:{{this.product.price}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+ <style>
+        .card {
+            border-width: 2px;
+            width: 18rem;
+            border-radius: 40px;
+            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: -1px 5px 25px -7px #070303;
+            margin-top: 93px;
+        }
+        @media only screen and (max-width: 949px) {
+
+            .card {
+                margin-top: fixed-bottom;
+            }
+        }
+    </style>

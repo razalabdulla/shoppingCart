@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">1</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+             <th scope="col">Mobile</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {{#each order}}
+          <tr>
+            <th scope="row">{{@index}}</th>
+            <td>{{this.deliveryDetails.name}}</td>
+            <td>{{this.deliveryDetails.email}}</td>
+            <td>{{this.deliveryDetails.address}}</td>
+            <td>{{this.deliveryDetails.mobile}}</td>
+            
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
